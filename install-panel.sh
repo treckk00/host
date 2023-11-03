@@ -331,13 +331,13 @@ check_os_comp() {
 
   case "$OS" in
   ubuntu)
-    PHP_SOCKET="/run/php/php8.0-fpm.sock"
+    PHP_SOCKET="/run/php/php8.1-fpm.sock"
     [ "$OS_VER_MAJOR" == "18" ] && SUPPORTED=true
     [ "$OS_VER_MAJOR" == "20" ] && SUPPORTED=true
     [ "$OS_VER_MAJOR" == "22" ] && SUPPORTED=true
     ;;
   debian)
-    PHP_SOCKET="/run/php/php8.0-fpm.sock"
+    PHP_SOCKET="/run/php/php8.1-fpm.sock"
     [ "$OS_VER_MAJOR" == "9" ] && SUPPORTED=true
     [ "$OS_VER_MAJOR" == "10" ] && SUPPORTED=true
     [ "$OS_VER_MAJOR" == "11" ] && SUPPORTED=true
@@ -572,7 +572,7 @@ ubuntu22_dep() {
   apt_update
 
   # Install Dependencies
-  apt -y install php8.0 php8.0-{cli,gd,mysql,pdo,mbstring,tokenizer,bcmath,xml,fpm,curl,zip} nginx tar unzip git redis-server redis cron
+  apt -y install php8.1 php8.1-{cli,gd,mysql,pdo,mbstring,tokenizer,bcmath,xml,fpm,curl,zip} nginx tar unzip git redis-server redis cron
 
   sudo apt install wget -y
   wget https://dev.mysql.com/get/mysql-apt-config_0.8.12-1_all.deb
@@ -605,7 +605,7 @@ ubuntu20_dep() {
   apt_update
 
   # Install Dependencies
-  apt -y install php8.0 php8.0-{cli,gd,mysql,pdo,mbstring,tokenizer,bcmath,xml,fpm,curl,zip} nginx tar unzip git redis-server redis cron
+  apt -y install php8.1 php8.1-{cli,gd,mysql,pdo,mbstring,tokenizer,bcmath,xml,fpm,curl,zip} nginx tar unzip git redis-server redis cron
 
   sudo apt install wget -y
   wget https://dev.mysql.com/get/mysql-apt-config_0.8.12-1_all.deb
@@ -638,7 +638,7 @@ ubuntu18_dep() {
   apt_update
 
   # Install Dependencies
-  apt -y install php8.0 php8.0-{cli,gd,mysql,pdo,mbstring,tokenizer,bcmath,xml,fpm,curl,zip} nginx tar unzip git redis-server redis cron
+  apt -y install php8.1 php8.1-{cli,gd,mysql,pdo,mbstring,tokenizer,bcmath,xml,fpm,curl,zip} nginx tar unzip git redis-server redis cron
 
   sudo apt install wget -y
   wget https://dev.mysql.com/get/mysql-apt-config_0.8.12-1_all.deb
@@ -670,7 +670,7 @@ debian_stretch_dep() {
   apt_update
 
   # Install Dependencies
-  apt -y install php8.0 php8.0-{cli,gd,mysql,pdo,mbstring,tokenizer,bcmath,xml,fpm,curl,zip} nginx curl tar unzip git redis-server cron
+  apt -y install php8.1 php8.1-{cli,gd,mysql,pdo,mbstring,tokenizer,bcmath,xml,fpm,curl,zip} nginx curl tar unzip git redis-server cron
 
   sudo apt install wget -y
   wget https://dev.mysql.com/get/mysql-apt-config_0.8.12-1_all.deb
@@ -703,7 +703,7 @@ debian_buster_dep() {
   apt_update
 
   # install dependencies
-  apt -y install php8.0 php8.0-{cli,gd,mysql,pdo,mbstring,tokenizer,bcmath,xml,fpm,curl,zip} nginx curl tar unzip git redis-server cron
+  apt -y install php8.1 php8.1-{cli,gd,mysql,pdo,mbstring,tokenizer,bcmath,xml,fpm,curl,zip} nginx curl tar unzip git redis-server cron
 
   sudo apt install wget -y
   wget https://dev.mysql.com/get/mysql-apt-config_0.8.12-1_all.deb
@@ -736,7 +736,7 @@ debian_dep() {
   apt_update
 
   # install dependencies
-  apt -y install php8.0 php8.0-{cli,gd,mysql,pdo,mbstring,tokenizer,bcmath,xml,fpm,curl,zip} nginx curl tar unzip git redis-server cron
+  apt -y install php8.1 php8.1-{cli,gd,mysql,pdo,mbstring,tokenizer,bcmath,xml,fpm,curl,zip} nginx curl tar unzip git redis-server cron
 
   sudo apt install wget -y
   wget https://dev.mysql.com/get/mysql-apt-config_0.8.12-1_all.deb
